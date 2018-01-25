@@ -1,5 +1,6 @@
 // VARIABLES
-$font-stack: montserrat, sans-serif;
+$font-stack-h: montserrat, sans-serif;
+$font-stack-p: 'Crimson Text', serif;
 $normal: 400;
 $bold: 700;
 $gray: #424B54;
@@ -98,7 +99,7 @@ sub {
     z-index: 3;
     top: 5%;
     left: 7.5%;
-    font-family: $font-stack;
+    font-family: $font-stack-h;
     font-weight: $bold;
     font-size: 6em;
     color: $yellow;
@@ -126,6 +127,7 @@ sub {
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+      font-family: $font-stack-p;
       color: $gray;
     }
   }
