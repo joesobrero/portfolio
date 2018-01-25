@@ -24,27 +24,35 @@ $(document).ready(function() {
     // show and hide
     function showAbout() {
         about.delay(delay).fadeIn(fadeIn);
+        aboutB.css("text-decoration", "line-through");
     }
     function hideAbout() {
         about.fadeOut(fadeOut);
+        aboutB.css("text-decoration", "none");
     }
     function showEdu() {
         edu.delay(delay).fadeIn(fadeIn);
+        eduB.css("text-decoration", "line-through");
     }
     function hideEdu() {
         edu.fadeOut(fadeOut);
+        eduB.css("text-decoration", "none");
     }
     function showWork() {
         work.delay(delay).fadeIn(fadeIn);
+        workB.css("text-decoration", "line-through");
     }
     function hideWork() {
         work.fadeOut(fadeOut);
+        workB.css("text-decoration", "none");
     }
     function showContact() {
         contact.delay(delay).fadeIn(fadeIn);
+        contactB.css("text-decoration", "line-through");
     }
     function hideContact() {
         contact.fadeOut(fadeOut);
+        contactB.css("text-decoration", "none");
     }
 
 
