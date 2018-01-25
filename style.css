@@ -109,6 +109,7 @@ sub {
       top: 50%;
       transform: translateY(-50%);
       font-family: "Crimson Text", serif;
+      font-size: 1.2em;
       color: #424B54; }
 
 #about img {
