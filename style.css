@@ -70,4 +70,30 @@ sub {
   /* Move the subscripted text down, but only half as far down as the superscript moved up */
   bottom: -0.25em; }
 
+.center {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black; }
+  .center h1 {
+    position: absolute;
+    z-index: 3;
+    top: 5%;
+    left: 5%;
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 6em;
+    color: #e0e0e0; }
+  .center .content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+    background-color: blue; }
+
 /*# sourceMappingURL=style.css.map */
