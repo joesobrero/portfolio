@@ -112,6 +112,14 @@ sub {
     width: 70%;
     height: 60%;
     border: 1px solid #000;
+    .image-box {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35%;
+      height: 500px;
+    }
     .text {
       position: absolute;
       left: 40%;
@@ -120,5 +128,19 @@ sub {
       transform: translateY(-50%);
       color: $gray;
     }
+  }
+}
+
+#about {
+  img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 250px;
   }
 }

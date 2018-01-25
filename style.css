@@ -95,6 +95,13 @@ sub {
     width: 70%;
     height: 60%;
     border: 1px solid #000; }
+    .center .content .image-box {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35%;
+      height: 500px; }
     .center .content .text {
       position: absolute;
       left: 40%;
@@ -102,5 +109,16 @@ sub {
       top: 50%;
       transform: translateY(-50%);
       color: #424B54; }
+
+#about img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 500px;
+  border-radius: 250px; }
 
 /*# sourceMappingURL=style.css.map */
