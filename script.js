@@ -1,10 +1,14 @@
 $(document).ready(function() {
-    // variables
+
+    // VARIABLES
+
+    // views and timing
     var view = 0;
     var fadeIn = 1000;
     var fadeOut = 650;
     var delay = 800;
 
+    // html elements
     var about = $('#about');
     var edu = $('#edu');
     var work = $('#work');
@@ -14,7 +18,10 @@ $(document).ready(function() {
     var workB = $('#work-b');
     var contactB = $('#contact-b');
 
-    // functions
+
+    // FUNCTIONS
+
+    // show and hide
     function showAbout() {
         about.delay(delay).fadeIn(fadeIn);
     }
@@ -40,7 +47,10 @@ $(document).ready(function() {
         contact.fadeOut(fadeOut);
     }
 
-    // events
+
+    // EVENTS
+
+    // navigation
     aboutB.click(function() {
         switch(view) {
             case 0:
