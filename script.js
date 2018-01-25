@@ -78,7 +78,7 @@ $(document).ready(function() {
     workB.click(function() {
         switch(view) {
             case 0:
-                hideAbout()
+                hideAbout();
                 break;
             case 1:
                 hideEdu();
