@@ -112,6 +112,13 @@ $(document).ready(function(){
     }
 
     // EVENTS
+
+    // page opening
+    a.delay(delay).fadeIn(fadeIn);
+    $('#back').delay(500).fadeIn(fadeIn);
+    $('#foot').delay(150).fadeIn(fadeIn);
+
+    // next or pev
     $('#next').click(function(){
         next();
     });

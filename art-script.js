@@ -167,6 +167,13 @@ $(document).ready(function(){
     }
 
     // EVENTS
+
+    // opening page
+    a.delay(delay).fadeIn(fadeIn);
+    $('#back').delay(500).fadeIn(fadeIn);
+    $('#foot').delay(150).fadeIn(fadeIn);
+
+    // next or prev
     $('#next').click(function(){
         next();
     });
