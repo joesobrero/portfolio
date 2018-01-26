@@ -73,8 +73,8 @@ $(document).ready(function() {
             'border-radius': '-=500px'
         }, imageTiming);
         aboutImgBox.animate({
-            left: '+=10%',
-            bottom: '+=10%'
+            right: '+=100px',
+            bottom: '+=100px'
         }, imageTiming);
     }
     function hideAboutImg() {
@@ -82,8 +82,8 @@ $(document).ready(function() {
             'border-radius': '+=500px'
         }, imageTiming);
         aboutImgBox.animate({
-            left: '-=10%',
-            bottom: '-=10%'
+            right: '-=100px',
+            bottom: '-=100px'
         }, imageTiming);
     }
     function showEduImg() {
@@ -91,8 +91,8 @@ $(document).ready(function() {
             'border-radius': '-=500px'
         }, imageTiming);
         eduImgBox.animate({
-            left: '+=10%',
-            bottom: '+=10%'
+            right: '+=100px',
+            bottom: '+=100px'
         }, imageTiming);
     }
     function hideEduImg() {
@@ -100,8 +100,8 @@ $(document).ready(function() {
             'border-radius': '+=500px'
         }, imageTiming);
         eduImgBox.animate({
-            left: '-=10%',
-            bottom: '-=10%'
+            right: '-=100px',
+            bottom: '-=100px'
         }, imageTiming);
     }
 
