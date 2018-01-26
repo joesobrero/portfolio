@@ -1,6 +1,3 @@
-/**
- * Created by josephsobrero on 1/11/18.
- */
 $(document).ready(function(){
 
     // VARIABLES
