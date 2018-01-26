@@ -82,7 +82,15 @@ MY CSS
 
  */
 
-// EXAMPLES
+#back {
+  z-index: 3;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  width: 4%;
+  height: auto;
+}
+
 #photo-box {
   z-index: 0;
   position: absolute;
