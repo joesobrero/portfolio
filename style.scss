@@ -163,14 +163,14 @@ nav {
       color: $gray;
       background-color: rgba(255, 255, 255, 0.8);
       p {
-        margin: 15px 30px;
+        margin: 15px 0;
         line-height: 1.2;
       }
       .ital {
         font-weight: $ital;
       }
       .no-margin {
-        margin: 0 30px;
+        margin: 0;
       }
     }
   }

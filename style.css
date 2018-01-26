@@ -138,12 +138,12 @@ nav {
       color: #424B54;
       background-color: rgba(255, 255, 255, 0.8); }
       .center .content .text p {
-        margin: 15px 30px;
+        margin: 15px 0;
         line-height: 1.2; }
-      .center .content .text #ital {
+      .center .content .text .ital {
         font-weight: 600; }
       .center .content .text .no-margin {
-        margin: 0 30px; }
+        margin: 0; }
 
 #about img, #edu img {
   position: absolute;
