@@ -142,7 +142,7 @@ nav {
         line-height: 1.2; }
       .center .content .text #ital {
         font-weight: 600; }
-      .center .content .text #no-margin {
+      .center .content .text .no-margin {
         margin: 0 30px; }
 
 #about img, #edu img {
