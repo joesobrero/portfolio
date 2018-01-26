@@ -75,6 +75,17 @@ a {
   font-weight: 700;
   line-height: 0.8; }
 
+#email-link {
+  color: #72A4D8;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: montserrat, sans-serif;
+  font-size: 1.2em; }
+
 nav {
   position: fixed;
   z-index: 10;
@@ -142,11 +153,12 @@ nav {
         margin: 15px 0;
         line-height: 1.2; }
       .center .content .text .ital {
-        font-weight: 600; }
+        font-weight: 600;
+        margin-right: 10px; }
       .center .content .text .no-margin {
         margin: 0; }
 
-#about-img-box, #edu-img-box {
+#about-img-box, #edu-img-box, #contact-img-box {
   position: absolute;
   z-index: 1;
   left: -5%;
@@ -154,7 +166,7 @@ nav {
   width: 30%;
   height: 40%; }
 
-#about img, #edu img {
+#about-img, #edu-img, #contact-img {
   position: absolute;
   left: 0;
   bottom: 0;

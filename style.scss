@@ -8,6 +8,7 @@ $gray: #424B54;
 $yellow: #E1CE7A;
 $pink: #EBCFB2;
 $white: #FFFFFF;
+$blue: #72A4D8;
 
 
 /*
@@ -94,6 +95,17 @@ a {
   font-weight: $bold;
   line-height: 0.8;
 }
+#email-link {
+  color: $blue;
+  font-weight: $normal;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-stack-h;
+  font-size: 1.2em;
+}
 
 // Nav
 nav {
@@ -170,6 +182,7 @@ nav {
       }
       .ital {
         font-weight: $ital;
+        margin-right: 10px;
       }
       .no-margin {
         margin: 0;
@@ -178,7 +191,7 @@ nav {
   }
 }
 
-#about-img-box, #edu-img-box {
+#about-img-box, #edu-img-box, #contact-img-box {
   position: absolute;
   z-index: 1;
   left: -5%;
@@ -187,14 +200,12 @@ nav {
   height: 40%;
 }
 
-#about, #edu {
-  img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    border-radius: 500px;
-    border-bottom-left-radius: 0;
-  }
+#about-img, #edu-img, #contact-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 500px;
+  border-bottom-left-radius: 0;
 }
