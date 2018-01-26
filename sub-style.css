@@ -86,8 +86,9 @@ MY CSS
 #art-box {
   z-index: 0;
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 80%;
   height: 80vh; }
   #art-box img {
@@ -96,8 +97,8 @@ MY CSS
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%; }
+    max-width: 100%;
+    max-height: 100%; }
 
 #photo-box {
   z-index: 0;
