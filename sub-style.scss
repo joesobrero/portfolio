@@ -91,7 +91,7 @@ MY CSS
   height: auto;
 }
 
-#art-box {
+#art-box, #photo-box {
   z-index: 0;
   position: absolute;
   left: 50%;
@@ -110,6 +110,7 @@ MY CSS
   }
 }
 
+/*
 #photo-box {
   z-index: 0;
   position: absolute;
@@ -128,6 +129,7 @@ MY CSS
     min-height: 100%;
   }
 }
+*/
 
 #foot {
   z-index: 2;
