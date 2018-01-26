@@ -118,20 +118,14 @@ nav {
     font-weight: 700;
     font-size: 6em;
     color: #E1CE7A; }
-  .center .image-box {
-    position: absolute;
-    left: -5%;
-    bottom: -5%;
-    width: 30%;
-    height: 40%; }
   .center .content {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 60%; }
+    width: 40%;
+    height: 50%; }
     .center .content .text {
       position: absolute;
       left: 50%;
@@ -141,6 +135,8 @@ nav {
       font-family: "Crimson Text", serif;
       font-size: 1.3em;
       color: #424B54;
+      padding: 25px;
+      border-radius: 15px;
       background-color: rgba(255, 255, 255, 0.8); }
       .center .content .text p {
         margin: 15px 0;
@@ -149,6 +145,14 @@ nav {
         font-weight: 600; }
       .center .content .text .no-margin {
         margin: 0; }
+
+#about-img-box, #edu-img-box {
+  position: absolute;
+  z-index: 1;
+  left: -5%;
+  bottom: -5%;
+  width: 30%;
+  height: 40%; }
 
 #about img, #edu img {
   position: absolute;

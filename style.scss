@@ -144,21 +144,14 @@ nav {
     font-size: 6em;
     color: $yellow;
   }
-  .image-box {
-    position: absolute;
-    left: -5%;
-    bottom: -5%;
-    width: 30%;
-    height: 40%;
-  }
   .content {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 60%;
+    width: 40%;
+    height: 50%;
     .text {
       position: absolute;
       left: 50%;
@@ -168,6 +161,8 @@ nav {
       font-family: $font-stack-p;
       font-size: 1.3em;
       color: $gray;
+      padding: 25px;
+      border-radius: 15px;
       background-color: rgba(255, 255, 255, 0.8);
       p {
         margin: 15px 0;
@@ -181,6 +176,15 @@ nav {
       }
     }
   }
+}
+
+#about-img-box, #edu-img-box {
+  position: absolute;
+  z-index: 1;
+  left: -5%;
+  bottom: -5%;
+  width: 30%;
+  height: 40%;
 }
 
 #about, #edu {

@@ -8,6 +8,10 @@ $(document).ready(function() {
     var fadeOut = 650;
     var delay = 800;
 
+    // clicks
+    var aboutImgClicks = 0;
+    var eduImgClicks = 0;
+
     // html elements
     var about = $('#about');
     var edu = $('#edu');
@@ -17,7 +21,10 @@ $(document).ready(function() {
     var eduB = $('#edu-b');
     var workB = $('#work-b');
     var contactB = $('#contact-b');
-
+    var aboutImg = $('#about-img');
+    var aboutImgBox = $('#about-img-box');
+    var eduImg = $('#edu-img');
+    var eduImgBox = $('#edu-img-box');
 
     // FUNCTIONS
 
@@ -25,6 +32,7 @@ $(document).ready(function() {
     function showAbout() {
         about.delay(delay).fadeIn(fadeIn);
         aboutB.css("text-decoration", "line-through");
+        view = 0
     }
     function hideAbout() {
         about.fadeOut(fadeOut);
@@ -33,6 +41,7 @@ $(document).ready(function() {
     function showEdu() {
         edu.delay(delay).fadeIn(fadeIn);
         eduB.css("text-decoration", "line-through");
+        view = 1
     }
     function hideEdu() {
         edu.fadeOut(fadeOut);
@@ -41,6 +50,7 @@ $(document).ready(function() {
     function showWork() {
         work.delay(delay).fadeIn(fadeIn);
         workB.css("text-decoration", "line-through");
+        view = 2
     }
     function hideWork() {
         work.fadeOut(fadeOut);
@@ -49,10 +59,49 @@ $(document).ready(function() {
     function showContact() {
         contact.delay(delay).fadeIn(fadeIn);
         contactB.css("text-decoration", "line-through");
+        view = 3
     }
     function hideContact() {
         contact.fadeOut(fadeOut);
         contactB.css("text-decoration", "none");
+    }
+
+    // image animation
+    function showAboutImg() {
+        aboutImg.animate({
+            'border-radius': '-=500px'
+        });
+        aboutImgBox.animate({
+            left: '+=10%',
+            bottom: '+=10%'
+        });
+    }
+    function hideAboutImg() {
+        aboutImg.animate({
+            'border-radius': '+=500px'
+        });
+        aboutImgBox.animate({
+            left: '-=10%',
+            bottom: '-=10%'
+        });
+    }
+    function showEduImg() {
+        eduImg.animate({
+            'border-radius': '-=500px'
+        });
+        eduImgBox.animate({
+            left: '+=10%',
+            bottom: '+=10%'
+        });
+    }
+    function hideEduImg() {
+        eduImg.animate({
+            'border-radius': '+=500px'
+        });
+        eduImgBox.animate({
+            left: '-=10%',
+            bottom: '-=10%'
+        });
     }
 
 
@@ -126,5 +175,31 @@ $(document).ready(function() {
         }
         showContact();
         view = 3;
+    });
+
+    // image hover
+    aboutImg.click(function() {
+        switch(aboutImgClicks) {
+            case 0:
+                showAboutImg();
+                aboutImgClicks = 1;
+                break;
+            case 1:
+                hideAboutImg();
+                aboutImgClicks = 0;
+                break;
+        }
+    });
+    eduImg.click(function() {
+        switch(eduImgClicks) {
+            case 0:
+                showEduImg();
+                eduImgClicks = 1;
+                break;
+            case 1:
+                hideEduImg();
+                eduImgClicks = 0;
+                break;
+        }
     });
 });
