@@ -2,6 +2,7 @@
 $font-stack-h: montserrat, sans-serif;
 $font-stack-p: 'Crimson Text', serif;
 $normal: 400;
+$ital: 600;
 $bold: 700;
 $gray: #424B54;
 $yellow: #E1CE7A;
@@ -165,11 +166,17 @@ nav {
         margin: 15px 30px;
         line-height: 1.2;
       }
+      #ital {
+        font-weight: $ital;
+      }
+      #no-margin {
+        margin: 0 30px;
+      }
     }
   }
 }
 
-#about {
+#about, #edu {
   img {
     position: absolute;
     left: 0;
