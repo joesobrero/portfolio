@@ -70,93 +70,64 @@ sub {
   /* Move the subscripted text down, but only half as far down as the superscript moved up */
   bottom: -0.25em; }
 
-a {
-  color: #000;
-  font-weight: 700;
-  line-height: 0.8; }
+/*
 
-nav {
-  position: fixed;
-  z-index: 10;
-  right: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 150px;
-  height: auto; }
-  nav p {
-    position: relative;
-    float: right;
-    width: auto;
-    text-align: right;
-    font-family: montserrat, sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    color: #424B54;
-    margin: 10px 0;
-    text-decoration: none; }
-    nav p:hover {
-      font-weight: 400;
-      cursor: pointer; }
+MY CSS
 
-#about-b {
-  text-decoration: line-through; }
-
-.center {
+ */
+#photo-box {
+  z-index: 0;
   position: absolute;
-  z-index: 1;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #FFFFFF;
   overflow: hidden; }
-  .center h1 {
+  #photo-box img {
+    z-index: -1;
     position: absolute;
-    z-index: 3;
-    top: 5%;
-    left: 7.5%;
-    font-family: montserrat, sans-serif;
-    font-weight: 700;
-    font-size: 6em;
-    color: #E1CE7A; }
-  .center .image-box {
-    position: absolute;
-    left: -5%;
-    bottom: -5%;
-    width: 30%;
-    height: 40%; }
-  .center .content {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 60%; }
-    .center .content .text {
-      position: absolute;
-      left: 50%;
-      top: 55%;
-      transform: translate(-50%, -45%);
-      width: 550px;
-      font-family: "Crimson Text", serif;
-      font-size: 1.3em;
-      color: #424B54;
-      background-color: rgba(255, 255, 255, 0.8); }
-      .center .content .text p {
-        margin: 15px 0;
-        line-height: 1.2; }
-      .center .content .text .ital {
-        font-weight: 600; }
-      .center .content .text .no-margin {
-        margin: 0; }
+    min-width: 100%;
+    min-height: 100%; }
 
-#about img, #edu img {
-  position: absolute;
-  left: 0;
+#foot {
+  z-index: 2;
+  position: fixed;
   bottom: 0;
-  width: 100%;
-  height: auto;
-  border-radius: 500px;
-  border-bottom-left-radius: 0; }
+  right: 0;
+  height: 145px;
+  width: 170px; }
+  #foot div {
+    z-index: 1;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 25px;
+    bottom: 25px;
+    background-color: #000;
+    opacity: 0.75; }
+  #foot p {
+    z-index: 2;
+    position: absolute;
+    font-family: montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #fff;
+    margin: 0;
+    padding: 0; }
+    #foot p:hover {
+      opacity: 0.7;
+      cursor: pointer; }
 
-/*# sourceMappingURL=style.css.map */
+#next {
+  right: 60px;
+  bottom: 78px; }
+
+#prev {
+  right: 60px;
+  bottom: 42px; }
+
+/*# sourceMappingURL=photo-style.css.map */
