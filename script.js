@@ -7,6 +7,7 @@ $(document).ready(function() {
     var fadeIn = 1000;
     var fadeOut = 650;
     var delay = 800;
+    var imageTiming = 600;
 
     // clicks
     var aboutImgClicks = 0;
@@ -70,38 +71,38 @@ $(document).ready(function() {
     function showAboutImg() {
         aboutImg.animate({
             'border-radius': '-=500px'
-        });
+        }, imageTiming);
         aboutImgBox.animate({
             left: '+=10%',
             bottom: '+=10%'
-        });
+        }, imageTiming);
     }
     function hideAboutImg() {
         aboutImg.animate({
             'border-radius': '+=500px'
-        });
+        }, imageTiming);
         aboutImgBox.animate({
             left: '-=10%',
             bottom: '-=10%'
-        });
+        }, imageTiming);
     }
     function showEduImg() {
         eduImg.animate({
             'border-radius': '-=500px'
-        });
+        }, imageTiming);
         eduImgBox.animate({
             left: '+=10%',
             bottom: '+=10%'
-        });
+        }, imageTiming);
     }
     function hideEduImg() {
         eduImg.animate({
             'border-radius': '+=500px'
-        });
+        }, imageTiming);
         eduImgBox.animate({
             left: '-=10%',
             bottom: '-=10%'
-        });
+        }, imageTiming);
     }
 
 
