@@ -91,6 +91,24 @@ MY CSS
   height: auto;
 }
 
+#art-box {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80vh;
+  img {
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
 #photo-box {
   z-index: 0;
   position: absolute;

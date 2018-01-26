@@ -83,6 +83,22 @@ MY CSS
   width: 4%;
   height: auto; }
 
+#art-box {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80vh; }
+  #art-box img {
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%; }
+
 #photo-box {
   z-index: 0;
   position: absolute;
@@ -138,4 +154,4 @@ MY CSS
   right: 60px;
   bottom: 42px; }
 
-/*# sourceMappingURL=photo-style.css.map */
+/*# sourceMappingURL=sub-style.css.map */
