@@ -71,7 +71,8 @@ sub {
   bottom: -0.25em; }
 
 a {
-  color: #72A4D8; }
+  color: #72A4D8;
+  cursor: pointer; }
 
 #email-link {
   font-weight: 400;
@@ -125,6 +126,11 @@ nav {
     font-weight: 700;
     font-size: 6em;
     color: #E1CE7A; }
+  .center h2 {
+    font-family: montserrat, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 40px 20px; }
   .center .text {
     position: absolute;
     z-index: 2;
@@ -144,6 +150,12 @@ nav {
       margin-right: 10px; }
     .center .text .no-margin {
       margin: 0 20px; }
+    .center .text ul {
+      margin-top: 20px;
+      margin-left: 80px;
+      list-style-type: disc; }
+      .center .text ul li {
+        margin-bottom: 15px; }
 
 #about-img-box, #edu-img-box, #contact-img-box {
   position: absolute;
@@ -153,12 +165,24 @@ nav {
   width: 30%;
   height: 40%; }
 
-#about-img, #edu-img, #contact-img {
+#work-img-box {
+  position: absolute;
+  z-index: 1;
+  right: 75px;
+  bottom: 75px;
+  width: 30%;
+  height: 40%; }
+
+#about-img, #edu-img, .work-img, #contact-img {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: auto;
   border-radius: 500px; }
+
+.work-img {
+  border-radius: 0;
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

@@ -92,6 +92,7 @@ sub {
 // Links
 a {
   color: $blue;
+  cursor: pointer;
 }
 #email-link {
   font-weight: $normal;
@@ -152,6 +153,12 @@ nav {
     font-size: 6em;
     color: $yellow;
   }
+  h2 {
+    font-family: $font-stack-h;
+    font-size: 1.5em;
+    font-weight: $bold;
+    margin: 0 0 40px 20px;
+  }
   .text {
     position: absolute;
     z-index: 2;
@@ -174,6 +181,14 @@ nav {
     .no-margin {
       margin: 0 20px;
     }
+    ul {
+      margin-top: 20px;
+      margin-left: 80px;
+      list-style-type: disc;
+      li {
+        margin-bottom: 15px;
+      }
+    }
   }
 }
 
@@ -186,11 +201,25 @@ nav {
   height: 40%;
 }
 
-#about-img, #edu-img, #contact-img {
+#work-img-box {
+  position: absolute;
+  z-index: 1;
+  right: 75px;
+  bottom: 75px;
+  width: 30%;
+  height: 40%;
+}
+
+#about-img, #edu-img, .work-img, #contact-img {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: auto;
   border-radius: 500px;
+}
+
+.work-img {
+  border-radius: 0;
+  display: none;
 }
