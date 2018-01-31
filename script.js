@@ -12,6 +12,7 @@ $(document).ready(function() {
     var imgTiming = 600;
     // for work
     var workView = 0;
+    var workPage = 0;
 
     // clicks
     var aboutImgClicks = 0;
@@ -32,6 +33,15 @@ $(document).ready(function() {
     var eduImgBox = $('#edu-img-box');
 
     // elements for work section
+    var leftTri = $('#tri-left');
+    var leftTriO = $('#tri-left-o');
+    var rightTri = $('#tri-right');
+    var rightTriO = $('#tri-right-o');
+    var bractText = $('#work-text-0');
+    var growText = $('#work-text-1');
+    var polyText = $('#work-text-2');
+    var freeText = $('#work-text-3');
+    // bract images
     var bractLogo = $('#bract-logo');
     var bractLogoB = $('#bract-logo-b');
     var bractCard = $('#bract-card');
@@ -40,6 +50,15 @@ $(document).ready(function() {
     var bractPosterB = $('#bract-poster-b');
     var bractGif = $('#bract-gif');
     var bractGifB = $('#bract-gif-b');
+    // grow nodes images
+    var growUi = $('#grow-ui');
+    var growUiB = $('#grow-ui-b');
+    var growWebUi = $('#grow-web-ui');
+    var growWebUiB = $('#grow-web-ui-b');
+    var growLogo = $('#grow-logo');
+    var growLogoB = $('#grow-logo-b');
+    var growPres = $('#grow-pres');
+    var growPresB = $('#grow-pres-b');
 
     // FUNCTIONS
 
@@ -81,7 +100,7 @@ $(document).ready(function() {
         contactB.css("text-decoration", "none");
     }
 
-    // image animation
+    // image animation main pages
     function showAboutImg() {
         aboutImg.animate({
             'border-radius': '-=500px'
@@ -118,12 +137,15 @@ $(document).ready(function() {
             bottom: '-=100px'
         }, imgTiming);
     }
-    function showBractLogo() {
+
+    // work animations
+    function hideBractImg() {
         switch(workView) {
             case 0:
                 break;
             case 1:
-                return;
+                bractLogo.fadeOut(imgTiming);
+                break;
             case 2:
                 bractCard.fadeOut(imgTiming);
                 break;
@@ -132,67 +154,124 @@ $(document).ready(function() {
                 break;
             case 4:
                 bractGif.fadeOut(imgTiming);
-                break;
         }
+    }
+    function showBractLogo() {
+        hideBractImg();
         workView = 1;
         bractLogo.delay(imgTiming).fadeIn(imgTiming);
     }
     function showBractCard() {
-        switch(workView) {
-            case 0:
-                break;
-            case 1:
-                bractLogo.fadeOut(imgTiming);
-                break;
-            case 2:
-                return;
-            case 3:
-                bractPoster.fadeOut(imgTiming);
-                break;
-            case 4:
-                bractGif.fadeOut(imgTiming);
-                break;
-        }
+        hideBractImg();
         workView = 2;
         bractCard.delay(imgTiming).fadeIn(imgTiming);
     }
     function showBractPoster() {
-        switch(workView) {
-            case 0:
-                break;
-            case 1:
-                bractLogo.fadeOut(imgTiming);
-                break;
-            case 2:
-                bractCard.fadeOut(imgTiming);
-                break;
-            case 3:
-                return;
-            case 4:
-                bractGif.fadeOut(imgTiming);
-                break;
-        }
+        hideBractImg();
         workView = 3;
         bractPoster.delay(imgTiming).fadeIn(imgTiming);
     }
     function showBractGif() {
-        switch(workView) {
-            case 0:
-                break;
-            case 1:
-                bractLogo.fadeOut(imgTiming);
-                break;
-            case 2:
-                bractCard.fadeOut(imgTiming);
-                break;
-            case 3:
-                bractPoster.fadeOut(imgTiming);
-                break;
-            case 4:
-                return;
-        }
+        hideBractImg();
         workView = 4;
         bractGif.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function hideGrowImg() {
+        switch(workView) {
+            case 5:
+                break;
+            case 6:
+                growUi.fadeOut(imgTiming);
+                break;
+            case 7:
+                growWebUi.fadeOut(imgTiming);
+                break;
+            case 8:
+                growLogo.fadeOut(imgTiming);
+                break;
+            case 9:
+                growPres.fadeOut(imgTiming);
+        }
+    }
+    function showGrowUi() {
+        hideGrowImg();
+        workView = 6;
+        growUi.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showGrowWebUi() {
+        hideGrowImg();
+        workView = 7;
+        growWebUi.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showGrowLogo() {
+        hideGrowImg();
+        workView = 8;
+        growLogo.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showGrowPres() {
+        hideGrowImg();
+        workView = 9;
+        growPres.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function hideWorkSection() {
+        switch(workPage) {
+            case 0:
+                hideBractImg(workView);
+                bractText.fadeOut(fadeOut);
+                break;
+            case 1:
+                hideGrowImg(workView);
+                growText.fadeOut(fadeOut);
+                break;
+            case 2:
+                //hidePolyImg(workView);
+                polyText.fadeOut(fadeOut);
+                break;
+            case 3:
+                //hideFreeImg(workView);
+                freeText.fadeOut(fadeOut);
+                break;
+        }
+    }
+    function showBract() {
+        if(workPage == 0) {
+            return;
+        }
+        hideWorkSection();
+        workPage = 0;
+        bractText.delay(delay).fadeIn(fadeIn);
+        leftTri.hide();
+        leftTriO.show();
+    }
+    function showGrow() {
+        if(workPage == 1) {
+            return;
+        }
+        hideWorkSection();
+        workPage = 1;
+        growText.delay(delay).fadeIn(fadeIn);
+        leftTriO.hide();
+        leftTri.show();
+    }
+    function showPoly() {
+        if(workPage == 2) {
+            return;
+        }
+        hideWorkSection();
+        workPage = 2;
+        polyText.delay(delay).fadeIn(fadeIn);
+        rightTriO.hide();
+        rightTri.show();
+    }
+    function showFree() {
+        if(workPage == 3) {
+            return;
+        }
+        hideWorkSection();
+        workPage = 3;
+        freeText.delay(delay).fadeIn(fadeIn);
+        rightTri.hide();
+        rightTriO.show();
     }
 
 
@@ -291,6 +370,38 @@ $(document).ready(function() {
                 hideEduImg();
                 eduImgClicks = 0;
                 break;
+        }
+    });
+
+    // work navigation
+    leftTri.click(function() {
+        switch(workPage) {
+            case 0:
+                return;
+            case 1:
+                showBract();
+                break;
+            case 2:
+                showGrow();
+                break;
+            case 3:
+                showPoly();
+                break;
+        }
+    });
+    rightTri.click(function() {
+        switch(workPage) {
+            case 0:
+                showGrow();
+                break;
+            case 1:
+                showPoly();
+                break;
+            case 2:
+                showFree();
+                break;
+            case 3:
+                return;
         }
     });
 

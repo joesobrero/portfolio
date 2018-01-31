@@ -201,15 +201,6 @@ nav {
   height: 40%;
 }
 
-#work-img-box {
-  position: absolute;
-  z-index: 1;
-  right: 75px;
-  bottom: 75px;
-  width: 30%;
-  height: 40%;
-}
-
 #about-img, #edu-img, .work-img, #contact-img {
   position: absolute;
   left: 0;
@@ -219,9 +210,47 @@ nav {
   border-radius: 500px;
 }
 
-.work-img {
+// work
+#work-img-box {
+  position: absolute;
+  z-index: 1;
+  right: 75px;
+  bottom: 75px;
+  width: 30%;
+  height: 40%;
+}
+
+#work-img-box img {
   border-radius: 0;
   display: none;
   max-height: 500px;
   max-width: 500px;
+}
+
+#work-selector {
+  position: absolute;
+  left: 7.5%;
+  bottom: 150px;
+  width: 100px;
+  height: 50px;
+  img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+#tri-left {
+  left: 0;
+  cursor: pointer;
+}
+#tri-left-o {
+  left: 0;
+}
+#tri-right {
+  left: 50px;
+  cursor: pointer;
+}
+#tri-right-o {
+  left: 50px;
 }
