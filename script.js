@@ -59,6 +59,11 @@ $(document).ready(function() {
     var growLogoB = $('#grow-logo-b');
     var growPres = $('#grow-pres');
     var growPresB = $('#grow-pres-b');
+    // cp racing images
+    var polyManu = $('#poly-manu');
+    var polyManuB = $('#poly-manu-b');
+    var polyTest = $('#poly-test');
+    var polyTestB = $('#poly-test-b');
 
     // FUNCTIONS
 
@@ -139,7 +144,8 @@ $(document).ready(function() {
     }
 
     // work animations
-    function hideBractImg() {
+    // images
+    function hideWorkImg() {
         switch(workView) {
             case 0:
                 break;
@@ -154,30 +160,7 @@ $(document).ready(function() {
                 break;
             case 4:
                 bractGif.fadeOut(imgTiming);
-        }
-    }
-    function showBractLogo() {
-        hideBractImg();
-        workView = 1;
-        bractLogo.delay(imgTiming).fadeIn(imgTiming);
-    }
-    function showBractCard() {
-        hideBractImg();
-        workView = 2;
-        bractCard.delay(imgTiming).fadeIn(imgTiming);
-    }
-    function showBractPoster() {
-        hideBractImg();
-        workView = 3;
-        bractPoster.delay(imgTiming).fadeIn(imgTiming);
-    }
-    function showBractGif() {
-        hideBractImg();
-        workView = 4;
-        bractGif.delay(imgTiming).fadeIn(imgTiming);
-    }
-    function hideGrowImg() {
-        switch(workView) {
+                break;
             case 5:
                 break;
             case 6:
@@ -191,44 +174,83 @@ $(document).ready(function() {
                 break;
             case 9:
                 growPres.fadeOut(imgTiming);
+                break;
+            case 10:
+                break;
+            case 11:
+                polyManu.fadeOut(imgTiming);
+                break;
+            case 12:
+                polyTest.fadeOut(imgTiming);
         }
     }
+    function showBractLogo() {
+        hideWorkImg();
+        workView = 1;
+        bractLogo.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showBractCard() {
+        hideWorkImg();
+        workView = 2;
+        bractCard.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showBractPoster() {
+        hideWorkImg();
+        workView = 3;
+        bractPoster.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showBractGif() {
+        hideWorkImg();
+        workView = 4;
+        bractGif.delay(imgTiming).fadeIn(imgTiming);
+    }
     function showGrowUi() {
-        hideGrowImg();
+        hideWorkImg();
         workView = 6;
         growUi.delay(imgTiming).fadeIn(imgTiming);
     }
     function showGrowWebUi() {
-        hideGrowImg();
+        hideWorkImg();
         workView = 7;
         growWebUi.delay(imgTiming).fadeIn(imgTiming);
     }
     function showGrowLogo() {
-        hideGrowImg();
+        hideWorkImg();
         workView = 8;
         growLogo.delay(imgTiming).fadeIn(imgTiming);
     }
     function showGrowPres() {
-        hideGrowImg();
+        hideWorkImg();
         workView = 9;
         growPres.delay(imgTiming).fadeIn(imgTiming);
     }
+    function showPolyManu() {
+        hideWorkImg();
+        workView = 11;
+        polyManu.delay(imgTiming).fadeIn(imgTiming);
+    }
+    function showPolyTest() {
+        hideWorkImg();
+        workView = 12;
+        polyTest.delay(imgTiming).fadeIn(imgTiming);
+    }
+    // sections
     function hideWorkSection() {
         switch(workPage) {
             case 0:
-                hideBractImg(workView);
+                hideWorkImg();
                 bractText.fadeOut(fadeOut);
                 break;
             case 1:
-                hideGrowImg(workView);
+                hideWorkImg();
                 growText.fadeOut(fadeOut);
                 break;
             case 2:
-                //hidePolyImg(workView);
+                hideWorkImg();
                 polyText.fadeOut(fadeOut);
                 break;
             case 3:
-                //hideFreeImg(workView);
+                hideWorkImg();
                 freeText.fadeOut(fadeOut);
                 break;
         }
@@ -417,5 +439,25 @@ $(document).ready(function() {
     });
     bractGifB.click(function() {
         showBractGif();
+    });
+    // grow nodes
+    growUiB.click(function() {
+        showGrowUi();
+    });
+    growWebUiB.click(function() {
+        showGrowWebUi();
+    });
+    growLogoB.click(function() {
+        showGrowLogo();
+    });
+    growPresB.click(function() {
+        showGrowPres();
+    });
+    // cp racing
+    polyManuB.click(function() {
+        showPolyManu();
+    });
+    polyTestB.click(function() {
+        showPolyTest();
     });
 });
